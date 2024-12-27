@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+{%block content%}
+<p href="#" >Название книги: {{book.full_name}}</p>
+    <form action="" method="post">
+        {%csrf_token%}
+        <button class="btn btn-danger" type="submit">Удалить</button>
+    </form>
+<a class="btn btn-link" href="{%url 'book-list'%}">Назад</a>
+{%endblock%}
